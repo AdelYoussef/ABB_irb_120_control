@@ -1,0 +1,3 @@
+roslaunch attrobot att_robotics_lab.launch
+sudo nautilus
+

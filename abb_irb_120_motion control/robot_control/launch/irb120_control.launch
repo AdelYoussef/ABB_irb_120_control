@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find roboticarm)/robot_control/config/robot_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/abb_irb120_3_58" args="joint_state_controller
+             arm_controller
+             gripper_finger_joint1_controller
+             gripper_finger_joint2_controller"/>
+
+</launch>
+
+

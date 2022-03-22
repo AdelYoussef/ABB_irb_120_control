@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!--<include file="$(find roboticarm)/robot_gazebo/launch/irb120_gazebo.launch"/>-->
+  <include file="$(find abb_irb120_moveit_config)/launch/demo_gazebo.launch"/>
+  <!--include file="$(find camera)/launch/camera.launch"/>-->
+  <!--<include file="$(find bcinterface)/launch/bcinterface.launch"/>-->
+
+  <node name="robot_planning" pkg="roboticarm" type="robot_planning_grip.py"  output="screen"/>
+</launch>
